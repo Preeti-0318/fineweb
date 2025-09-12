@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+table {
+  width: 100%;
+  margin-top: 4rem;
+  border-collapse: collapse;
+  border-radius: 1px;
+  overflow: hidden;
+}
+p{
+  line-height: 1.5rem;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: left;
+}
+    .recent-post1 img {
+    width: 77%;
+    height: auto;
+    border-radius: 8px;
+    }
+    
+
+.key-terms-section h3,
+.key-terms-section h4 {
+  color: #fff;
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+.key-terms-section p {
+  margin: 12px 0;
+}
+
+.key-terms-section strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.key-terms-section ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.key-terms-section li {
+  margin: 6px 0;
+}
+.recent-post1{
+  display: flex;
+  justify-content: center;
+}
+@media(max-width:768px){
+.future-blog{
+  width: 91%;
+  padding-left: 31px;
+  margin-top: 59px;
+}
+}
+@media(max-width:480px){
+  body{
+    overflow-x: hidden;
+  }
+  .sidebar{
+    margin-bottom: 4rem;
+    padding-right: 20px;
+
+  }.main-blog{
+    margin-bottom: -111px;
+  }
+.future-blog {
+        padding-left: 0px;
+      }
+.featured-post img{
+        width: 92%;
+      }
+      .tableContainer{
+        overflow-x: scroll;
+      }
+      .table th, table td {
+    padding: 5px
+}
+    .main-blog, .sidebar {
+        min-width: 97% !important;
+    }
+}

@@ -196,7 +196,7 @@ display: flex;
 }
 
 .value-item p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: #ccc;
 }
@@ -246,7 +246,7 @@ display: flex;
 .value-item .value-para{
   font-family: Neue Haas Grotesk Display Pro;
 font-weight: 500;
-font-size: 14px;
+font-size: 18px;
 line-height: 23px;
 letter-spacing: 0px;
 vertical-align: middle;
@@ -256,7 +256,7 @@ width: 95%;
 .value-item-right .value-para{
   font-family: Neue Haas Grotesk Display Pro;
 font-weight: 500;
-font-size: 14px;
+font-size: 18px;
 line-height: 23px;
 letter-spacing: 0px;
 vertical-align: middle;
@@ -276,6 +276,7 @@ width: 65%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap:1rem;
   /* padding-left: 11rem; */
 }
 /* ============================= */

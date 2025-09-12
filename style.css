@@ -573,7 +573,7 @@ color: black;
     right: 473px
 }
 .nebulaButton{
-        top: 76px;
+        top: 35px;
     right: -125px;
 }
 .buttonlink{
@@ -809,7 +809,7 @@ top: 0rem; */
      height: 35rem;
 }
 .offerZoomOut{
-     animation: OfferZoomOut 3s infinite ease;
+     animation: OfferZoomOut 10s infinite ease;
 
 }
 .offerZoomIn{
@@ -835,25 +835,25 @@ top: 0rem; */
     bottom: 21rem;
     left: 55rem;
     opacity: 0;
-     animation: OfferAppear 3s infinite ease;
+     animation: OfferAppear 10s infinite ease;
 }
 .cardImgAdjustment1{
     
     bottom: 28rem;
     opacity: 0;
-    animation: OfferAppear 3s infinite linear;
+    animation: OfferAppear 10s infinite linear;
 }
 
 .godImgAdjustment2{
     
     bottom: 23rem;
     right: -18rem;
-    animation: OfferAppear 3s infinite linear;
+    animation: OfferAppear 10s infinite linear;
 }
 .cardImgAdjustment2{
     bottom: 28rem;
     left: 20rem;
-    animation: OfferAppear 3s infinite linear;
+    animation: OfferAppear 10s infinite linear;
 
 }
 .imgGroup1{
@@ -862,7 +862,7 @@ top: 0rem; */
 }
 .bg2{
     /* opacity: 0; */
-    animation: offerZoomIn 3s infinite linear;
+    animation: offerZoomIn 10s infinite linear;
 }
 .imgGroup2{
     overflow: hidden;
@@ -880,17 +880,21 @@ top: 0rem; */
 .cardImgAdjustment3{
     bottom: 28.5rem;
     left: 23.5rem;
-     animation: rightToLeftSwipe 1s  linear infinite;
+     animation: rightToLeftSwipe 10s  linear infinite;
 }
 .godImgAdjustment3{
     top: -27rem;
     left: 60rem;
-     animation: rotateandApper 1s  linear infinite;
+     animation: rotateandApper 10s  linear infinite;
 
 }
 .bg3{
     /* opacity: 0; */
-    animation: backZoomMore 1s  linear infinite;
+    animation: backZoomMore 10s  linear infinite;
+}
+.bg4{
+    animation: backZoomMore 10s  linear infinite;
+
 }
 .imgGroup4{
         top: -166.5rem;
@@ -903,34 +907,51 @@ top: 0rem; */
 .cardImgAdjustment4{
     bottom: 28rem;
     right: 3rem;
-    animation: rightToleftSwipe 2s infinite linear ;
+    animation: rightToleftSwipe 10s infinite ease ;
 }
 .godImgAdjustment4{
         bottom: 26rem;
     right: -17rem;
-    animation: OfferAppear 2s infinite linear;
+    animation: OfferAppear 10s infinite ease;
 }
 
-/* ============================ */
+/* ============ Used in javascript ================ */
 
+.imgGroup {
+            
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 5s ease;
+            transform-style: preserve-3d;
+        }
 
-
+        .imgGroup.active {
+            opacity: 1;
+            visibility: visible;
+        }
 /* ============================== */
 
-/* .imgGroup:nth-child(1){animation-delay: 0s;}
-.imgGroup:nth-child(1){animation-delay: 2s;}
-.imgGroup:nth-child(1){animation-delay: 4s;}
-.imgGroup:nth-child(1){animation-delay: 6s;} */
-/* .inactive{
+.mobileview{
     display: none;
+    
 }
-.active{
-    display: block;
-} */
+
+
+
+
+
+
+/*==========================================================*/
+
+
 @keyframes rightToleftSwipe {
     0%{
         right: 3rem;
         opacity: 0;
+    }
+    10%,20%,30%,40%{
+         right: -20rem;
+        opacity: 1;
     }
     50%{
         right: -20rem;
@@ -938,7 +959,7 @@ top: 0rem; */
     }
     100%{
         right: -20rem;
-        opacity: 0;
+        opacity: 1;
     }
 }
 @keyframes backZoomMore{
@@ -946,13 +967,13 @@ top: 0rem; */
         transform: scale(1);
         opacity: 0;
      }
-     50%{
+     10%{
         transform: scale(1.5);
         opacity: 1;
      }
       100%{
         transform: scale(1.5);
-        opacity: 0;
+        opacity: 1;
      }
 }
 @keyframes rotateandApper {
@@ -960,7 +981,34 @@ top: 0rem; */
         transform: scale(1);
         opacity: 0;
     }
-    50%{
+    10%{
+        transform: scale(1.3);
+        top: -29rem;
+        left: 58rem;
+        opacity: 1;
+    
+    }
+    60%{
+        transform: scale(1.3);
+        top: -29rem;
+        left: 58rem;
+        opacity: 1;
+    
+    }
+    70%{
+        transform: scale(1.3);
+        top: -29rem;
+        left: 58rem;
+        opacity: 1;
+    }
+    80%{
+        transform: scale(1.3);
+        top: -29rem;
+        left: 58rem;
+        opacity: 1;
+    
+    }
+    90%{
         transform: scale(1.3);
         top: -29rem;
         left: 58rem;
@@ -971,7 +1019,7 @@ top: 0rem; */
         transform: scale(1.3);
         top: -29rem;
         left: 58rem;
-        opacity: 0;
+        opacity: 1;
 
 
     }
@@ -982,14 +1030,34 @@ top: 0rem; */
     left: 23.5rem;
     opacity: 0;
     }
-    50%{
+    10%{
+        left: -1.5rem;
+        opacity: 1;
+
+    }
+    60%{
+        left: -1.5rem;
+        opacity: 1;
+
+    }
+    70%{
+        left: -1.5rem;
+        opacity: 1;
+
+    }
+    80%{
+        left: -1.5rem;
+        opacity: 1;
+
+    }
+    90%{
         left: -1.5rem;
         opacity: 1;
 
     }
     100%{
         left: -1.5rem;
-        opacity: 0;
+        opacity: 1;
     }
 }
 @keyframes OfferZoomOut{
@@ -998,20 +1066,20 @@ top: 0rem; */
         opacity: 0;
 
     }
-    50%{
+    50%, 60%, 70%, 80%,90%{
         transform: scale(1);
         opacity: 1;
     }
     100%{
         transform: scale(1);
-        opacity: 0;
+        opacity: 1;
     }
 }
 @keyframes offerZoomIn {
     0%{
         transform: scale(1);
     }
-    100%{
+    50%,60%,70%,80%, 90%, 100%{
         transform: scale(1.1);
     }
 }
@@ -1019,17 +1087,17 @@ top: 0rem; */
     0%{
         opacity: 0;
     }
-    25%{
+    10%{
         opacity: 0.4;
     }
     50%{
         opacity: 1;
     }
-    75%{
+    75%, 85%, 95%{
         opacity: 1;
     }
     100%{
-        opacity: 0;
+        opacity: 1;
     }
 }
 
@@ -1112,6 +1180,231 @@ top: 0rem; */
 
 
 
+/* ======karthi================ */
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+    .whatWeOfferImageGroup {
+        height: 25rem;
+        transform: scale(0.8);
+    }
+
+    .whatweOfferBackground {
+        height: 25rem;
+    }
+
+    .godImg, .whatWeOfferCard {
+        height: 15rem;
+    }
+
+    /* Adjust positions for tablet */
+    .godImgAdjustment1 {
+        bottom: 15rem;
+        left: 35rem;
+    }
+
+    .cardImgAdjustment1 {
+        bottom: 25rem;
+        margin-left: -72px;    }
+
+    .godImgAdjustment2 {
+        bottom: 17rem;
+        right: -10rem;
+    }
+
+    .cardImgAdjustment2 {
+        bottom: 20rem;
+        left: 15rem;
+    }
+
+    .imgGroup2 {
+        top: -650px;
+    }
+    
+    .imgGroup3 {
+        top: -1171px;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        transform: translateZ(0);
+    }
+
+    .cardImgAdjustment3 {
+        bottom: 20.5rem;
+        margin-left: 13.5rem;
+        opacity: 1;
+        
+    }
+
+    .godImgAdjustment3 {
+        top: -20rem;
+        margin-left: -12rem;
+        opacity: 1;
+        
+    }
+
+    .imgGroup4 {
+        top: -120rem;
+    }
+
+    .cardImgAdjustment4 {
+        bottom: 20rem;
+        margin-left: -9rem;
+    }
+
+    .godImgAdjustment4 {
+        bottom: 18rem;
+        right: -7rem;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .whatWeOfferImageGroup {
+        height: 20rem;
+        transform: scale(0.5);
+        display: none;
+    }
+
+    .whatweOfferBackground {
+        height: 20rem;
+    }
+
+    .godImg, .whatWeOfferCard {
+        height: 12rem;
+    }
+
+    /* Adjust positions for mobile */
+    .godImgAdjustment1 {
+        bottom: 12rem;
+        left: 25rem;
+    }
+
+    .cardImgAdjustment1 {
+        bottom: 16rem;
+    }
+
+    .godImgAdjustment2 {
+        bottom: 14rem;
+        right: -8rem;
+    }
+
+    .cardImgAdjustment2 {
+        bottom: 16rem;
+        left: 12rem;
+    }
+
+    .imgGroup2, .imgGroup3 {
+        top: -520px;
+    }
+
+    .cardImgAdjustment3 {
+        bottom: 14rem;
+        left: 14rem;
+    }
+
+    .godImgAdjustment3 {
+        top: -16rem;
+        left: 30rem;
+    }
+
+    .imgGroup4 {
+        top: -95rem;
+    }
+
+    .cardImgAdjustment4 {
+        bottom: 16rem;
+        right: 1.5rem;
+    }
+
+    .godImgAdjustment4 {
+        bottom: 14rem;
+        right: -9rem;
+    }
+ .mobileview {
+  display: block;
+  height: 59vh;
+  position: relative;
+}
+
+.mobile-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.mobile-slide {
+  position: absolute;
+  width: 101vw;
+  height: 57vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+}
+
+.mobile-slide.active {
+  opacity: 1;
+  z-index: 1;
+  margin-top: 9px;
+}
+
+.mobile-slide-image {
+  position: absolute;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+ 
+
+
+    /* Scale down animations */
+    @keyframes OfferZoomOut {
+        0% {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(0.8);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+    }
+
+    @keyframes offerZoomIn {
+        0% {
+            transform: scale(0.8);
+        }
+        100% {
+            transform: scale(0.9);
+        }
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .whatWeOfferImageGroup {
+        transform: scale(0.3);
+    }
+
+    .whatWeOfferHead {
+        font-size: 2rem;
+    }
+}
+
+
+/* =================end */
+
+
 
 /* Tablet View (768px and below) */
 @media (max-width: 768px) {
@@ -1140,16 +1433,16 @@ top: 0rem; */
     }
     /* scroll animation */
     .novaButton {
-    top: 23px;
-    right: 246px;
+    top: 0px;
+        right: 287px;
 }
     .finversityButton {
-    top: 7px;
-    right: -130px;
+    top: -10px;
+    right: -140px;
 }
 .nebulaButton {
-    top: 42px;
-    right: -98px;
+    top: 0px;
+    right: -102px;
 }
 
     /* card container */
@@ -1351,7 +1644,7 @@ top: 0rem; */
 }
 .nebulaButton {
     top: 61px;
-    right: 70px;
+    right: -63px;
 }
 .buttonlink{
     gap: 0.6rem;
@@ -1372,6 +1665,7 @@ top: 0rem; */
     .cardSection{
         /* background-color: red; */
         flex-direction: column;
+        margin-top: 160px;
     }
     .cardText {
         padding: 4rem 1rem 0;
@@ -1486,6 +1780,390 @@ top: 0rem; */
     }
 }
 
+/*==========================================macbook================================================*/
+@media screen and (min-device-width: 3072px) and (min-device-height: 1920px){
+    
+    /* header animation */
+    .circle {
+        height: 26rem;
+    }
 
+    .logoInsideCircle {
+        height: 8rem;
+        right: 240px;
+    }
 
+    .secondCircle {
+        margin: 0 0 0 24rem;
+    }
+
+    .secondLogo {
+        height: 3rem;
+        right: 740px;
+    }
+
+    .thardLogo {
+        height: 3.5rem;
+        right: 1010px;
+    }
+
+    .thardCircle {
+        margin: 42px 0 0 23rem;
+    }
+
+    .fourthLogo {
+        height: 3.5rem;
+        right: 790px;
+    }
+
+    .fourthCircle {
+        margin: 50px 0 0 22rem;
+    }
+
+    .eightthCircle {
+        margin: 0 0 0 21rem;
+    }
+
+    .tagLine {
+        font-size: 1.9rem;
+        right: 800px;
+    }
+
+    /* unlock your financial potential section */
+    .hover-Animation {
+        width: 100%;
+        height: 50%;
+        padding: 6rem 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hover-Animation:hover .hover-Animation-Test {
+        font-weight: 400;
+        font-size: 2.2rem;
+    }
+
+    .hover-Animation:hover .hover-Animation-para {
+        font-size: 7.1rem;
+        width: 68%;
+    }
+
+    .hover-Animation-Test {
+        font-weight: 400;
+        font-size: 7.5rem;
+    }
+
+    /* scroll animation */
+    .novaButton {
+        top: 38px;
+        right: 66rem;
+    }
+
+    .finversityButton {
+        top: 41px;
+        right: -85px;
+    }
+
+    .nebulaButton {
+        top: 12px;
+        right: -281px;
+    }
+
+    .buttonlink {
+        gap: 0.8rem;
+        padding: 20px;
+        font-size: 39px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        top: -30rem;
+    }
+
+    .scroll-section {
+        height: 24rem;
+    }
+
+    .slide-image {
+        height: 48vw;
+        width: 100%;
+        top: 30rem;
+    }
+
+    /* card section */
+    .cardSection {
+        flex-direction: column;
+        margin-top: 78rem;
+    }
+
+    .cardText {
+        padding: 4.5rem 1.5rem 0;
+        line-height: 2;
+    }
+
+    .cardHead {
+        font-size: 7.2rem;
+    }
+
+    .cardPara {
+        font-size: 3.2rem;
+    }
+
+    .cardsContainer {
+        padding: 1.5rem;
+        margin-top: 3.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: fit-content;
+    }
+
+    .card {
+        width: 41rem;
+        height: 57rem;
+    }
+
+    .iconAndText {
+        padding: 25px;
+    }
+    .cardIcon {
+        height: 5rem;
+        width: 5rem;
+    }
+.iconText {
+    font-weight: 400;
+    font-size: 3.8rem;
+}
+    .TextAndButton {
+        padding: 0 1.8rem 1.8rem;
+    }
+
+    .cardButton {
+        width: 35%;
+        font-size: 2rem;
+        margin-left: 26px;
+        margin-top: 46px;
+    }
+    .cardParaText{
+        font-weight: 500;
+        width: 96%;
+        font-size: 2.8rem;
+        margin-left: 25px;
+        height: 75px;
+    }
+    .cardImageOne {
+    height: 30rem;
+}
+.cardImageTwo {
+    height: 30rem;
+}
+.cardImageThree {
+    height: 30rem;
+}
+
+    /* Data privacy section */
+    .dataPrivacy {
+        margin: 2.5rem 0;
+        gap: 1.2rem;
+        padding: 19.2rem;
+    }
+
+    .dataPrivacyImage {
+        height: 13.5rem;
+    }
+
+    .textContainer {
+        gap: 1.2rem;
+    }
+
+    .dataPrivacyHeader {
+        font-size: 3.5rem;
+    }
+
+    .dataprivacyPara {
+        width: 100%;
+        font-size: 2.3rem;
+    }
+
+    /* why choose us section */
+    .chooseUsSection {
+        padding: 3.5rem 0rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .chooseUsHeading {
+        font-size: 3rem;
+        margin-bottom: 2.2rem;
+        padding: 0 1.2rem;
+    }
+
+    .AnimatedParaUl {
+        gap: 1.8rem;
+    }
+
+    .AnimatedParaUl li {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .whatWeOffer{
+    /* position: relative;
+     top: 43rem; */
+     display: flex;
+     flex-direction: column;
+     gap: 4rem;
+     /* justify-content: center; */
+     align-items: center;
+     overflow: hidden;
+}
+.whatWeOfferHead{
+        color: white;
+        font-size: 5.8rem;
+        font-weight: 500;
+        height: 33rem;
+    }
+.whatWeOfferImageGroup{
+    /* position: absolute; */
+    position: relative;
+    /* background-color: red; */
+    height: 35rem;
+    /* height: fit-content; */
+}
+.imgGroup1{
+    top: 0;
+    left: 0;
+}
+.imgGroup2,
+.imgGroup3{
+    position: inherit;
+    top: -891px;
+    bottom: 0;
+    /* background-color: red; */
+}
+
+.whatweOfferBackground{
+     height: 35rem;
+}
+.offerZoomOut{
+     animation: OfferZoomOut 3s infinite ease;
+
+}
+.offerZoomIn{
+     /* animation: OfferZoomIn 3s infinite ease; */
+
+}
+.godImg{
+    height: 20rem;
+    position: relative;
+    
+    
+}
+.whatWeOfferCard{
+    height: 20rem;
+    position: relative;
+    
+    
+    /* left: 55rem; */
+
+}
+.godImgAdjustment1{
+    bottom: 39rem;
+        left: 123rem;
+        opacity: 0;
+        animation: OfferAppear 3s infinite ease;
+        height: 38rem;
+    }
+.cardImgAdjustment1{
+    
+    bottom: 28rem;
+    opacity: 0;
+    animation: OfferAppear 3s infinite linear;
+}
+
+.godImgAdjustment2{
+    
+    bottom: 23rem;
+    right: -18rem;
+    animation: OfferAppear 3s infinite linear;
+}
+.cardImgAdjustment2{
+    bottom: 28rem;
+    left: 20rem;
+    animation: OfferAppear 3s infinite linear;
+
+}
+.imgGroup1{
+    opacity: 0;
+    /* display: none; */
+}
+.bg2{
+    /* opacity: 0; */
+    animation: offerZoomIn 3s infinite linear;
+}
+.imgGroup2{
+    overflow: hidden;
+    /* display: none; */
+    opacity: 0;
+    /* background-color: red; */
+    /* height: 35rem; */
+}
+.imgGroup3{
+    top: -111rem;
+    left: 0;
+    opacity: 0;
+    /* display: none; */
+}
+.cardImgAdjustment3{
+    bottom: 28.5rem;
+    left: 23.5rem;
+     animation: rightToLeftSwipe 4s  linear infinite;
+}
+.godImgAdjustment3{
+    top: -27rem;
+    left: 60rem;
+     animation: rotateandApper 4s  linear infinite;
+
+}
+.bg3{
+    /* opacity: 0; */
+    animation: backZoomMore 4s  linear infinite;
+}
+.imgGroup4{
+        top: -166.5rem;
+    /* background-color: red; */
+    position: relative;
+    opacity: 0;
+    /* display: none; */
+    
+}
+.cardImgAdjustment4{
+    bottom: 28rem;
+    right: 3rem;
+    animation: rightToleftSwipe 3s infinite ease ;
+}
+.godImgAdjustment4{
+        bottom: 26rem;
+    right: -17rem;
+    animation: OfferAppear 3s infinite ease;
+}
+
+/* ============ Used in javascript ================ */
+
+.imgGroup {
+            
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .imgGroup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+}
 

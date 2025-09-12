@@ -60,16 +60,16 @@ body::before {
 
 /* Searchbar */
 .Searchbar {
-    margin-top: clamp(1.5rem, 5vw, 3.75rem);
-    width: 100%;
-    max-width: 20.5rem;
-    height: 4rem;
-    color: #f8f6f6;
-    background: black;
-    border: 2px solid var(--border-color);
-    font-size: 1rem;
-    text-align: center;
-    font-family: inherit;
+  margin-top: clamp(1.5rem, 5vw, 3.75rem);
+  width: 100%;
+  height: 4rem;
+  color: #f8f6f6;
+  background: black;
+  border: 2px solid var(--border-color);
+  font-size: 1rem;
+  font-family: inherit;
+  padding-left: 2.8rem; /* Room for the icon */
+  text-align: left;
 }
 
 .maindiv {
@@ -247,12 +247,20 @@ h2 {
     align-items: center;
 }
 /* input section */
-.inputSection{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
+.inputSection {
+  position: relative;
+  width: 100%;
+  max-width: 20.5rem;
+}
+
+.inputSection i {
+    position: absolute;
+    top: 75%;
+    left: 28px;
+    transform: translateY(-50%);
+    color: #b3b3b3;
+    font-size: small;
+    pointer-events: none;
 }
 
 /* Layout for financial services */
@@ -332,8 +340,8 @@ h2 {
     border: 1px solid #3f3f3f;
     padding: clamp(1rem, 3vw, 1.875rem);
     width: 100%;
-    max-width: 272px;
-    min-height: 220px;
+    max-width: 400px;
+    min-height: 335px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -341,14 +349,14 @@ h2 {
 }
 
 .card-header {
-    font-size: clamp(0.75rem, 2.5vw, 0.8rem);
+    font-size: clamp(0.75rem, 2.5vw, 1.5rem);
     color: #777;
     margin-bottom: clamp(0.75rem, 2.5vw, 0.938rem);
     text-transform: uppercase;
 }
 
 .card-title {
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
+    font-size: clamp(1rem, 3.5vw, 1.8rem);
     margin-bottom: auto;
     color: #ccc;
 }
@@ -357,19 +365,19 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: clamp(1rem, 3vw, 1.25rem);
-    font-size: clamp(0.75rem, 2.5vw, 0.8rem);
+    font-size: clamp(0.75rem, 2.5vw, 1.2rem);
     color: #777;
 }
 
 .view-more-overlay {
     position: absolute;
-    bottom: -60px;
+    bottom: -117px;
     left: 0;
     right: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
-    height: 60px;
+    height: 97px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,7 +390,7 @@ h2 {
     color: #111;
     cursor: pointer;
     margin-top: clamp(0.5rem, 2vw, 0.625rem);
-    font-size: clamp(0.875rem, 3vw, 1rem);
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
 }
 
 .card:hover .view-more-overlay {
@@ -511,9 +519,15 @@ ul {
 
 @media (max-width: 768px) {
 
-  .inputSection{
-    padding: 0 0 0 4rem;
-  }
+  .inputSection i {
+    position: absolute;
+    top: 69%;
+    left: 30px;
+    transform: translateY(-50%);
+    color: #b3b3b3;
+    font-size: small;
+    pointer-events: none;
+}
   
   .brand-block {
     max-width: 100%;
@@ -532,10 +546,15 @@ ul {
   .col {
     flex: 0 0 40%;
   }
-  .inputSection{
-    justify-content: center;
-    padding: 0;
-  }
+  .inputSection i {
+    position: absolute;
+    top: 65%;
+    left: 30px;
+    transform: translateY(-50%);
+    color: #b3b3b3;
+    font-size: small;
+    pointer-events: none;
+}
 }
 
 @media (max-width: 480px) {
@@ -547,4 +566,19 @@ ul {
   .col {
     width: 100%;
   }
+  .card {
+    max-width: 393px;
+    min-height: 265px;
+}
+.card-title {
+    font-size: clamp(21px, 3.5vw, 1.8rem);
+    margin-bottom: auto;
+    color: #ccc;
+}
+.card-header {
+    font-size: 18px;
+}
+.card-footer {
+    font-size: 16px;
+}
 }

@@ -11,6 +11,15 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.referanceLink{
+    text-decoration: none;
+    color: white;
+}
+.recent-post1 img {
+    width: 77%;
+    height: auto;
+    border-radius: 8px;
+    }
 
 .container {
   max-width: 1024px;
@@ -181,36 +190,12 @@ body {
 
 /* Very Small Devices */
 @media (max-width: 480px) {
-  .container {
-    padding: 50px 12px;
-  }
-
-  .page-title {
-    font-size: 60px;
-  }
-  .sidebar{
-    flex-direction: column;
-  }
-
-  .blog-article h2,
-  .blog-article h3 {
-    font-size: 28px;
-  }
-
-  .blog-article p {
-    font-size: 15px;
-  }
-
-  .featured-text {
-    max-width: 90%;
-    padding: 6px 10px;
-  }
-
-  .featured-text h2 {
-    font-size: 14px;
-  }
-
-  .featured-text p {
-    font-size: 12px;
-  }
-}
+    .sidebar {
+        flex-direction: column;
+        text-align: center;
+        width: 10%;
+     }
+     .main-blog{
+        width: 100%;
+     }
+    }
